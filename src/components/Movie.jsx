@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../style/App.css";
 
-const MovieDetail = () => {
+const Movie = () => {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
@@ -77,4 +77,4 @@ const MovieDetail = () => {
   );
 };
 
-export default MovieDetail;
+export default Movie;
