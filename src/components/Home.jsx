@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import '../style/App.css';
 import { Link } from 'react-router-dom';
 
-const MovieAPIComponent = () => {
+const MovieAPI = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -46,4 +46,4 @@ const MovieAPIComponent = () => {
   );
 };
 
-export default MovieAPIComponent;
+export default MovieAPI;
