@@ -1,5 +1,6 @@
 import React from 'react';
-// import './Header.css'; // 
+import '../css/header.css'; // 
+import SearchIcon from '../images/noun-search-6830389.svg';
 
 const Header = () => {
     return (
@@ -11,10 +12,13 @@ const Header = () => {
             />
             <nav>
                 <ul className="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#tvshows">TV Shows</a></li>
-                    <li><a href="#movies">Movies</a></li>
-                    <li><a href="#new">New & Popular</a></li>
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#tvshows">Séries</a></li>
+                    <li><a href="#movies">Films</a></li>
+                    <li><a href="#new">Nouveautés les plus regardées</a></li>
+                    <li><a href="#home">Ma liste</a></li>
+                    <li><a href="#tvshows">Explorer par la langue</a></li>
+                    <img src={SearchIcon} alt="Loupe Rechercher"/>
                 </ul>
             </nav>
         </div>
