@@ -5,11 +5,13 @@ import SearchIcon from '../images/noun-search-6830389.svg';
 const Header = () => {
     return (
         <div className="header">
-            <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
-                alt="Netflix Logo" 
-                className="logo"
-            />
+            <a href="/">
+                <img 
+                    src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" 
+                    alt="Netflix Logo" 
+                    className="logo"
+                />
+            </a>
             <nav>
                 <ul className="nav-links">
                     <li><a href="#home">Accueil</a></li>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Header from './Header';
 import '../style/App.css';
 import { Link } from 'react-router-dom';
 
@@ -18,6 +19,7 @@ const MovieAPI = () => {
 
   return (
     <div>
+      <Header />
       <div>
         <h1>
           {movies[0] && movies[0].title ? movies[0].title : 'Titre non disponible'}

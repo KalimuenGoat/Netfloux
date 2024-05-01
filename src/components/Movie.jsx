@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import "../style/App.css";
+import "../style/movie.css";
+import Header from './Header'
 
 const Movie = () => {
   const { id } = useParams();
@@ -21,32 +23,34 @@ const Movie = () => {
   }, [id]);
 
   return (
-    <div>
+    <div className="movie-container">
+      <Header />
       {movie ? (
         <>
-          <div>
+          <div className="movie-header">
             <h1>{movie.title}</h1>
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-              alt={`Affiche de ${movie.title}`}
-            />
           </div>
-          <div>
-            <div>
+          <img
+            className="movie-image"
+            src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+            alt={`Backdrop of ${movie.title}`}
+          />
+          <div className="movie-details">
+            <div className="movie-info">
               <div>{movie.vote_average}</div>
               <div>{movie.release_date}</div>
-              <div>{movie.runtime}</div>
+              <div>{movie.runtime} min</div>
               <div>{movie.adult && "Pegi 18"}</div>
-              <p>{movie.overview}</p>
+              <p className="movie-overview">{movie.overview}</p>
             </div>
-            <div>
-              <div>
+            <div className="movie-stats">
+              <div className="movie-companies">
                 {movie.production_companies &&
                   movie.production_companies.map((company, index) => (
                     <p key={index}>{company.name}</p>
                   ))}
               </div>
-              <div>
+              <div className="movie-genres">
                 {movie.genres &&
                   movie.genres.map((genre, index) => (
                     <p key={index}>{genre.name}</p>
@@ -60,6 +64,7 @@ const Movie = () => {
       )}
     </div>
   );
+  
 };
 
 export default Movie;

@@ -34,11 +34,12 @@
 }
 
 .nav-links img {
-    height: 20px; 
+    height: 48px;
+    width: 48px; 
     cursor: pointer; 
 }
 
 
 .nav-links li a:hover, .nav-links img:hover {
-    text-decoration: underline; 
+    text-decoration: none;
 }
