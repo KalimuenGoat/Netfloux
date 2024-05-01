@@ -1,5 +1,5 @@
 import React from 'react';
-import '../css/header.css'; // 
+import '../style/header.css'; // 
 import SearchIcon from '../images/noun-search-6830389.svg';
 
 const Header = () => {
