@@ -78,12 +78,18 @@ html::-webkit-scrollbar {
   color: white;
 }
 
-.movies-list {
+/* .movies-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
+} */
+.movie-item{
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: relative;
+  overflow: visible;
 }
-
 .movie-item img {
   width: 240px;
   border-radius: 4px;
@@ -132,4 +138,11 @@ h1{
   font-family: Arial, Helvetica, sans-serif;
   font-size: 24px;
   font-weight: 400;
+}
+
+.slick-list {
+  overflow: visible !important;
+}
+.slick-slider {
+  z-index: 1; /* ou une autre valeur plus basse */
 }
