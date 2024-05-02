@@ -15,12 +15,9 @@ const Header = () => {
             </a>
             <nav>
                 <ul className="nav-links">
-                    <li><a href="#home">Accueil</a></li>
-                    <li><a href="#tvshows">Séries</a></li>
-                    <li><a href="#movies">Films</a></li>
-                    <li><a href="#new">Nouveautés les plus regardées</a></li>
-                    <li><a href="#home">Ma liste</a></li>
-                    <li><a href="#tvshows">Explorer par langue</a></li>
+                    <li><a href="/">Accueil</a></li>
+                    <li><a href="series">Séries</a></li>
+                    <li><a href="films">Films</a></li>
                     <li className="right">
                         <img src={SearchIcon} alt="Loupe Rechercher" className="icon-search"/>
                         <a href="#jeunesse" className='jeunesse-title'>Jeunesse</a>
