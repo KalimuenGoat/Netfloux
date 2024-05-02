@@ -4,16 +4,9 @@
   gap: 20px;
 }
 
-.movie-item {
-  background-color: #f9f9f9;
-  border-radius: 5px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 .movie-item img {
-  width: 100%;
-  border-radius: 5px;
+  width: 240px;
+  border-radius: 4px;
 }
 
 .movie-item h2 {

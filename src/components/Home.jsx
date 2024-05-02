@@ -32,13 +32,12 @@ const MovieAPI = () => {
             {movies.map(movie => (
                 <Link to={`/movie/${movie.id}`} key={movie.id}>
                   <div className="movie-item">
-                    {movie.poster_path && (
+                    {movie.backdrop_path && (
                       <img
-                      src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                      src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                       alt={`Affiche de ${movie.title}`}
                       />
                     )}
-                    <h2>{movie.title}</h2>
                   </div>
               </Link>
             ))}
