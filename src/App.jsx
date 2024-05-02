@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Home from "./components/Home";
 import Movie from "./components/Movie";
+import HomeSeries from "./components/HomeSeries";
+import HomeFilms from "./components/HomeFilms"
 
 function App() {
   return (
@@ -10,6 +12,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/movie/:id" element={<Movie />} />
+        <Route path="/series" element={<HomeSeries />} />
+        <Route path="/films" element={<HomeFilms />} />
       </Routes>
     </BrowserRouter>
   );
