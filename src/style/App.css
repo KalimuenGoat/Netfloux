@@ -17,24 +17,44 @@ html::-webkit-scrollbar {
 
 .description-block {
   position: absolute;
-  bottom: 130px;
+  bottom: 80px;
   left: 50px;
 }
 
+.title-main-movie {
+  font-size: 40px;
+}
+
 .description {
-  width: 500px;
+  width: 800px;
   font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
 }
 
 .buttons-bloc {
   margin-top: 30px;
+  width: 350px;
   display: flex;
   justify-content: space-between;
 }
 
-.play-icon, .more-info-icon {
-  width: 40px;
-  height: 40px;
+.play-icon {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  padding: 0;
+  margin-right: 10px;
+  margin-top: 6px;
+}
+
+.more-info-icon {
+  fill: white;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  margin-top: 6px;
+  margin-right: 10px;
 }
 
 .play-button, .more-info-button  {
@@ -54,7 +74,7 @@ html::-webkit-scrollbar {
 }
 
 .more-info-button {
-  background-color: #333;
+  background-color: #5f5f5f;
   color: white;
 }
 

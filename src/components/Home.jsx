@@ -89,13 +89,12 @@ const Home = () => {
           <h1>
             {popularMovies[0] && popularMovies[0].title ? popularMovies[0].title : 'Titre non disponible'}
           </h1>
-          <img src={popularMovies[0] && popularMovies[0].poster_path ? `https://image.tmdb.org/t/p/w500${popularMovies[0].poster_path}` : 'Pas de photo'} alt="Affiche du film" />
         <img className='cover-home' src={popularMovies[0] && popularMovies[0].poster_path ? `https://image.tmdb.org/t/p/w500${popularMovies[0].backdrop_path}` : 'Pas de photo'} alt="Affiche du film" />
         <div className='description-block'>
           <h1 className='title-main-movie'>
             {popularMovies[0] && popularMovies[0].title ? popularMovies[0].title : 'Titre non disponible'}
           </h1>
-          <div className='description'>{popularMovies[0] && popularMovies[0].overview ? popularMovies[0].overview : 'Titre non disponible'}</div>
+          <div className='description'><h1>{popularMovies[0] && popularMovies[0].overview ? popularMovies[0].overview : 'Titre non disponible'}</h1> </div>
         <div className='buttons-bloc'>
           <button className='play-button'><img src={playIcon} className='play-icon'/>Lecture</button>
           <button className='more-info-button'><img src={moreInfo} className='more-info-icon'/>Plus d'infos</button>
