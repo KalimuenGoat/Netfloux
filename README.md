@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Netfloux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Netfloux est une application web inspirée de Netflix, construite à l'aide de React.js et de l'API de The Movie Database (TMDb). Ce projet vise à offrir une expérience utilisateur similaire à celle de Netflix, avec une interface utilisateur élégante et réactive.
 
-## Available Scripts
+## Fonctionnalités
 
-In the project directory, you can run:
+- **Page d'accueil** : Affiche une liste de 12 films aléatoires tirés de l'API TMDb. En survolant un film, une modale apparaît offrant des informations supplémentaires sur le film. Chaque vignette de film permet d'accéder à une page de détails dédiée.
+  
+- **Page de détails du film** : Affiche des informations détaillées sur le film sélectionné, telles que le synopsis, le casting, la note moyenne, etc.
 
-### `npm start`
+## Technologies Utilisées
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React.js** : Utilisé pour construire l'interface utilisateur grâce à ses composants réactifs.
+- **Create React App** : Utilisé pour initialiser le projet.
+- **React Router** : Gère la navigation entre les pages de l'application.
+- **Axios** : Utilisé pour effectuer des requêtes HTTP vers l'API TMDb. Axios est préféré pour sa facilité d'utilisation et sa gestion intégrée des promesses.
+- **React Slick** : Utilisé pour créer un carrousel élégant et réactif pour la présentation des films.
+- **The Movie Database (TMDb) API** : Fournit les données des films.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Démarrage Rapide
 
-### `npm test`
+Suivez ces étapes pour configurer et lancer le projet localement :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Cloner le dépôt** :
 
-### `npm run build`
+   ```bash
+   git clone https://github.com/votre-username/Netfloux.git
+   cd Netfloux
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. **Installer les dépendances** :
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. **Configurer les clés d'API** :
 
-### `npm run eject`
+    Créez un compte sur TMDb et obtenez votre clé API.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. **Lancer l'application** :
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Auteurs
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+OBSemvyuS
+KalimuenGOAT
+RichardPrasomsouk
 
-## Learn More
+## Par manque de temps
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+On aurait avoir davantage de temps pour peaufiner le css et avoir un rendu
+vraiment plus proche de Netflix. 
+Il y a des features qu'on aurait aimé ajouter comme la barre de recherche
+ou un player-vidéo.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+On trouve qu'en seulement **1 semaine** d'apprentissage et de mise en pratique
+on a beaucoup appris aussi bien sur l'intérêt et le fonctionnement de React, de Node
+et de Git en plus avancé.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Merci Cyrille c'était un module rondement mené.

@@ -13,8 +13,6 @@ const HomeFilms = () => {
   const API_KEY = "4dcc21464991fe06bb4ceb635c4a803b";
   const [popularMovies, setPopularMovies] = useState([]);
   const [topRatedMovies, setTopRatedMovies] = useState([]);
-  const [popularTV, setPopularTV] = useState([]);
-  const [topRatedTV, setTopRatedTV] = useState([]);
 
   useEffect(() => {
     const fetchMoviesAndTV = async () => {
@@ -24,17 +22,9 @@ const HomeFilms = () => {
       const topRated = await axios.get(
         `https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`
       );
-      const popularTVShows = await axios.get(
-        `https://api.themoviedb.org/3/tv/popular?api_key=${API_KEY}`
-      );
-      const topRatedTVShows = await axios.get(
-        `https://api.themoviedb.org/3/tv/top_rated?api_key=${API_KEY}`
-      );
 
       setPopularMovies(popular.data.results);
       setTopRatedMovies(topRated.data.results);
-      setPopularTV(popularTVShows.data.results);
-      setTopRatedTV(topRatedTVShows.data.results);
     };
 
     fetchMoviesAndTV();
