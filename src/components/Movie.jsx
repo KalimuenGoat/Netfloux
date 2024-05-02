@@ -3,6 +3,9 @@ import { useParams } from "react-router-dom";
 import "../style/App.css";
 import "../style/movie.css";
 import Header from './Header'
+import playIcon from '../images/play-icon.svg';
+import checkIcon from '../images/check-icon.svg'
+import likeIcon from '../images/like-icon.svg'
 
 const Movie = () => {
   const { id } = useParams();
@@ -27,34 +30,41 @@ const Movie = () => {
       <Header />
       {movie ? (
         <>
-          <div className="movie-header">
-            <h1>{movie.title}</h1>
-          </div>
           <img
             className="movie-image"
             src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
             alt={`Backdrop of ${movie.title}`}
           />
+          <div className="cover-block">
+            <div className="movie-header">
+              <h1>{movie.title}</h1>
+            </div>
+            <div className="buttons-block">
+              <button className='play-button'><img src={playIcon} className='play-icon'/>Lecture</button>
+              <button className="check-button"><img src={checkIcon} className='check-icon'/></button>
+              <button className="like-button"><img src={likeIcon} className='like-icon'/></button>
+              </div>
+          </div>
           <div className="movie-details">
             <div className="movie-info">
-              <div>{movie.vote_average}</div>
+              <div className="recommandation"> Recommandé à {movie.vote_average * 10}%
+              </div>
               <div>{movie.release_date}</div>
-              <div>{movie.runtime} min</div>
+              <div>{Math.floor(movie.runtime / 60)}h {movie.runtime % 60}min</div>
               <div>{movie.adult && "Pegi 18"}</div>
               <p className="movie-overview">{movie.overview}</p>
             </div>
             <div className="movie-stats">
-              <div className="movie-companies">
-                {movie.production_companies &&
-                  movie.production_companies.map((company, index) => (
-                    <p key={index}>{company.name}</p>
-                  ))}
+              <div className="movie-companies"> Studio :
+                <span className="companies-list">
+                  {movie.production_companies &&
+                  movie.production_companies.map((company) => company.name).join(', ')}
+                </span>
               </div>
-              <div className="movie-genres">
-                {movie.genres &&
-                  movie.genres.map((genre, index) => (
-                    <p key={index}>{genre.name}</p>
-                  ))}
+              <div className="movie-genres"> Genres :
+                <span className="genre-list">
+                  {movie.genres && movie.genres.map((genre) => genre.name).join(', ')}
+                </span>
               </div>
             </div>
           </div>
