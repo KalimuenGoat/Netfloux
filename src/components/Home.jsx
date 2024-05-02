@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "./Header";
+import playIcon from '../images/play-icon.svg';
+import moreInfo from '../images/more-info-icon.svg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -84,19 +86,21 @@ const Home = () => {
     <div>
       <Header />
       <div>
-        <h1>
-          {popularMovies[0] && popularMovies[0].title
-            ? popularMovies[0].title
-            : "Titre non disponible"}
-        </h1>
-        <img
-          src={
-            popularMovies[0] && popularMovies[0].poster_path
-              ? `https://image.tmdb.org/t/p/w500${popularMovies[0].poster_path}`
-              : "Pas de photo"
-          }
-          alt="Affiche du film"
-        />
+          <h1>
+            {popularMovies[0] && popularMovies[0].title ? popularMovies[0].title : 'Titre non disponible'}
+          </h1>
+          <img src={popularMovies[0] && popularMovies[0].poster_path ? `https://image.tmdb.org/t/p/w500${popularMovies[0].poster_path}` : 'Pas de photo'} alt="Affiche du film" />
+        <img className='cover-home' src={movies[0] && movies[0].poster_path ? `https://image.tmdb.org/t/p/w500${movies[0].backdrop_path}` : 'Pas de photo'} alt="Affiche du film" />
+        <div className='description-block'>
+          <h1 className='title-main-movie'>
+            {movies[0] && movies[0].title ? movies[0].title : 'Titre non disponible'}
+          </h1>
+          <div className='description'>{movies[0] && movies[0].overview ? movies[0].overview : 'Titre non disponible'}</div>
+        <div className='buttons-bloc'>
+          <button className='play-button'><img src={playIcon} className='play-icon'/>Lecture</button>
+          <button className='more-info-button'><img src={moreInfo} className='more-info-icon'/>Plus d'infos</button>
+          </div>
+        </div>
       </div>
       <div className="Decalage">
         <div>

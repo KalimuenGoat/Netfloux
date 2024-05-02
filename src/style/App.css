@@ -10,6 +10,53 @@ html::-webkit-scrollbar {
 .Decalage{
   margin-left: 60px;
 }
+.cover-home {
+  width: 100vw;
+  position: relative;
+}
+
+.description-block {
+  position: absolute;
+  bottom: 130px;
+  left: 50px;
+}
+
+.description {
+  width: 500px;
+  font-family: 'Helvetica', sans-serif;
+}
+
+.buttons-bloc {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.play-icon, .more-info-icon {
+  width: 40px;
+  height: 40px;
+}
+
+.play-button, .more-info-button  {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-button {
+  background-color: white;
+  color: black;
+}
+
+.more-info-button {
+  background-color: #333;
+  color: white;
+}
 
 .movies-list {
   display: grid;
