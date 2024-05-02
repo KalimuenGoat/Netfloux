@@ -7,6 +7,7 @@ import moreInfo from '../images/more-info-icon.svg';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../style/HomeSeries.css";
 
 const HomeSeries = () => {
   const API_KEY = "4dcc21464991fe06bb4ceb635c4a803b";
@@ -30,11 +31,11 @@ const HomeSeries = () => {
   }, []);
 
   const NextArrow = ({ onClick }) => {
-    return <div className="arrow next" onClick={onClick}></div>;
+    return <div className="arrow next-series" onClick={onClick}></div>;
   };
 
   const PrevArrow = ({ onClick }) => {
-    return <div className="arrow prev" onClick={onClick}></div>;
+    return <div className="arrow prev-series" onClick={onClick}></div>;
   };
 
   const settings = {
@@ -80,16 +81,15 @@ const HomeSeries = () => {
           <h1>
             {popularTV[0] && popularTV[0].title ? popularTV[0].title : 'Titre non disponible'}
           </h1>
-          <img src={popularTV[0] && popularTV[0].poster_path ? `https://image.tmdb.org/t/p/w500${popularTV[0].poster_path}` : 'Pas de photo'} alt="Affiche du film" />
-        <img className='cover-home' src={popularTV[0] && popularTV[0].poster_path ? `https://image.tmdb.org/t/p/w500${popularTV[0].backdrop_path}` : 'Pas de photo'} alt="Affiche du film" />
-        <div className='description-block'>
-          <h1 className='title-main-movie'>
+        <img className='cover-home-series' src={popularTV[0] && popularTV[0].poster_path ? `https://image.tmdb.org/t/p/w500${popularTV[0].backdrop_path}` : 'Pas de photo'} alt="Affiche du film" />
+        <div className='description-block-series'>
+          <h1 className='title-main-movie-series'>
             {popularTV[0] && popularTV[0].title ? popularTV[0].title : 'Titre non disponible'}
           </h1>
-          <div className='description'>{popularTV[0] && popularTV[0].overview ? popularTV[0].overview : 'Titre non disponible'}</div>
-        <div className='buttons-bloc'>
-          <button className='play-button'><img src={playIcon} className='play-icon'/>Lecture</button>
-          <button className='more-info-button'><img src={moreInfo} className='more-info-icon'/>Plus d'infos</button>
+          <div className='description-series'>{popularTV[0] && popularTV[0].overview ? popularTV[0].overview : 'Titre non disponible'}</div>
+        <div className='buttons-bloc-series'>
+          <button className='play-button-series'><img src={playIcon} className='play-icon-series'/>Lecture</button>
+          <button className='more-info-button-series'><img src={moreInfo} className='more-info-icon-series'/>Plus d'infos</button>
           </div>
         </div>
       </div>
@@ -99,7 +99,7 @@ const HomeSeries = () => {
           <Slider {...settings}>
             {popularTV.map((movie) => (
               <Link to={`/movie/${movie.id}`} key={movie.id}>
-                <div className="movie-item">
+                <div className="movie-item-series">
                   {movie.backdrop_path && (
                     <img
                       src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
@@ -116,7 +116,7 @@ const HomeSeries = () => {
           <Slider {...settings}>
             {topRatedTV.map((movie) => (
               <Link to={`/movie/${movie.id}`} key={movie.id}>
-                <div className="movie-item">
+                <div className="movie-item-series">
                   {movie.backdrop_path && (
                     <img
                       src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
