@@ -1,0 +1,135 @@
+html {
+    scrollbar-width: none; 
+  }
+  
+  
+  html::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .Decalage-notés{
+    margin-left: 60px;
+  }
+  .cover-home-notés {
+    width: 100vw;
+    position: relative;
+  }
+  
+  .description-block-notés {
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+  }
+  
+  .title-main-movie-notés {
+    font-size: 40px;
+  }
+  
+  .description-notés {
+    width: 800px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+  }
+  
+  .buttons-bloc-notés {
+    margin-top: 30px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .play-icon-notés {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    margin-top: 6px;
+  }
+  
+  .more-info-icon-notés {
+    fill: white;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-top: 6px;
+    margin-right: 10px;
+  }
+  
+  .play-button-notés, .more-info-button-notés  {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .play-button-notés {
+    background-color: white;
+    color: black;
+  }
+  
+  .more-info-button-notés {
+    background-color: #5f5f5f;
+    color: white;
+  }
+  
+  .movies-list-notés {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .movie-item-notés img {
+    width: 240px;
+    border-radius: 4px;
+  }
+  
+  .movie-item-notés h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .ImageContainer-notés {
+    width: 400px;
+    height: 300px;
+  }
+  
+  .arrow-notés {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .next-notés {
+    right: 0;
+    background-image: url('../images/Right_arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .prev-notés {
+    background-image: url('../images/Left_arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }

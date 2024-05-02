@@ -18,6 +18,7 @@ const Header = () => {
                     <li><a href="/">Accueil</a></li>
                     <li><a href="series">Séries</a></li>
                     <li><a href="films">Films</a></li>
+                    <li><a href="notés">Films bien notés</a></li>
                     <li className="right">
                         <img src={SearchIcon} alt="Loupe Rechercher" className="icon-search"/>
                         <a href="#jeunesse" className='jeunesse-title'>Jeunesse</a>

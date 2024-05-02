@@ -1,0 +1,135 @@
+html {
+    scrollbar-width: none; 
+  }
+  
+  
+  html::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .Decalage-films{
+    margin-left: 60px;
+  }
+  .cover-home-films {
+    width: 100vw;
+    position: relative;
+  }
+  
+  .description-block-films {
+    position: absolute;
+    bottom: 80px;
+    left: 50px;
+  }
+  
+  .title-main-movie-films {
+    font-size: 40px;
+  }
+  
+  .description-films {
+    width: 800px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 16px;
+  }
+  
+  .buttons-bloc-films {
+    margin-top: 30px;
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .play-icon-films {
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    margin-right: 10px;
+    margin-top: 6px;
+  }
+  
+  .more-info-icon-films {
+    fill: white;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+    margin-top: 6px;
+    margin-right: 10px;
+  }
+  
+  .play-button-films, .more-info-button-films  {
+    font-family: 'Helvetica', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .play-button-films {
+    background-color: white;
+    color: black;
+  }
+  
+  .more-info-button-films {
+    background-color: #5f5f5f;
+    color: white;
+  }
+  
+  .movies-list-films {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .movie-item-films img {
+    width: 240px;
+    border-radius: 4px;
+  }
+  
+  .movie-item-films h2 {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .ImageContainer-films {
+    width: 400px;
+    height: 300px;
+  }
+  
+  .arrow-films {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .next-films {
+    right: 0;
+    background-image: url('../images/Right_arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .prev-films {
+    background-image: url('../images/Left_arrow.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+  }
