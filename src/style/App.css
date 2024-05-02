@@ -1,3 +1,7 @@
+/* body {
+  overflow-x: hidden;
+} */
+
 html {
   scrollbar-width: none; 
 }
@@ -144,7 +148,7 @@ h1{
   overflow: visible !important;
 }
 .slick-slider {
-  z-index: 1; /* ou une autre valeur plus basse */
+  z-index: 1; 
 }
 
 .more-info-button a {

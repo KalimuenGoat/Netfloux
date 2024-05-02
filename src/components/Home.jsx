@@ -9,6 +9,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MovieCard from "./MovieCard";
 
+window.addEventListener('scroll', () => {
+  window.scrollTo(0, window.pageYOffset);
+});
+
 const Home = () => {
   const API_KEY = "4dcc21464991fe06bb4ceb635c4a803b";
   const [popularMovies, setPopularMovies] = useState([]);
