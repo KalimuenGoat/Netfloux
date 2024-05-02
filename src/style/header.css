@@ -1,5 +1,5 @@
 .header {
-    background-color: #141414;
+    background-color: #060606;
     color: white;
     display: flex;
     align-items: center;
@@ -11,8 +11,9 @@
 }
 
 .header .logo {
-    height: 35px;
-    margin-right: 20px;
+    height: 25px;
+    margin-right: 45px;
+    padding-left: 40px;
 }
 
 .nav-links {
@@ -21,25 +22,39 @@
     align-items: center;
     margin: 0;
     padding: 0;
+    width: 100%; /* ensures the nav-links use full width */
+    justify-content: space-between; /* pushes the .right item to the edge */
 }
 
 .nav-links li {
-    margin-right: 20px
+    margin-right: 20px;
 }
 
 .nav-links li a {
-    color: white;
-    text-decoration: none; 
-    font-size: 16px; 
-}
-
-.nav-links img {
-    height: 48px;
-    width: 48px; 
-    cursor: pointer; 
-}
-
-
-.nav-links li a:hover, .nav-links img:hover {
+    color: #E5E5E5;
     text-decoration: none;
+    font-size: 14px;
+}
+
+.nav-links .right {
+    display: flex;
+    align-items: center;
+    padding-left: 420px;
+}
+
+.nav-links .right .icon-search {
+    height: 48px;
+    width: 48px;
+    cursor: pointer;
+}
+
+.jeunesse-title {
+    margin-left: 10px;
+}
+
+.nav-links .right .icon-bell {
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    margin-left: 20px;
 }
