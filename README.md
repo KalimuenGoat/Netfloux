@@ -4,7 +4,7 @@ Netfloux est une application web inspirée de Netflix, construite à l'aide de R
 
 ## Fonctionnalités
 
-- **Page d'accueil** : Affiche une liste de 12 films aléatoires tirés de l'API TMDb. En survolant un film, une modale apparaît offrant des informations supplémentaires sur le film. Chaque vignette de film permet d'accéder à une page de détails dédiée.
+- **Page d'accueil** : Affiche une liste de films aléatoires tirés de l'API TMDb. En survolant un film, une modale apparaît offrant des informations supplémentaires sur le film. Chaque vignette de film permet d'accéder à une page de détails dédiée.
   
 - **Page de détails du film** : Affiche des informations détaillées sur le film sélectionné, telles que le synopsis, le casting, la note moyenne, etc.
 

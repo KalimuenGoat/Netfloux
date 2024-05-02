@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import Header from "./Header";
-import playIcon from '../images/play-icon.svg';
-import moreInfo from '../images/more-info-icon.svg';
+import playIcon from "../images/play-icon.svg";
+import moreInfo from "../images/more-info-icon.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -85,23 +85,50 @@ const Home = () => {
     ],
   };
 
-  
   return (
     <div>
       <Header />
       <div>
-          <h1>
-            {popularMovies[0] && popularMovies[0].title ? popularMovies[0].title : 'Titre non disponible'}
+        <h1>
+          {popularMovies[0] && popularMovies[0].title
+            ? popularMovies[0].title
+            : "Titre non disponible"}
+        </h1>
+        <img
+          className="cover-home"
+          src={
+            popularMovies[0] && popularMovies[0].poster_path
+              ? `https://image.tmdb.org/t/p/w500${popularMovies[0].backdrop_path}`
+              : "Pas de photo"
+          }
+          alt="Affiche du film"
+        />
+        <div className="description-block">
+          <h1 className="title-main-movie">
+            {popularMovies[0] && popularMovies[0].title
+              ? popularMovies[0].title
+              : "Titre non disponible"}
           </h1>
-        <img className='cover-home' src={popularMovies[0] && popularMovies[0].poster_path ? `https://image.tmdb.org/t/p/w500${popularMovies[0].backdrop_path}` : 'Pas de photo'} alt="Affiche du film" />
-        <div className='description-block'>
-          <h1 className='title-main-movie'>
-            {popularMovies[0] && popularMovies[0].title ? popularMovies[0].title : 'Titre non disponible'}
-          </h1>
-          <div className='description'><h1>{popularMovies[0] && popularMovies[0].overview ? popularMovies[0].overview : 'Titre non disponible'}</h1> </div>
-        <div className='buttons-bloc'>
-          <button className='play-button'><img src={playIcon} className='play-icon'/>Lecture</button>
-          <button className='more-info-button'><img src={moreInfo} className='more-info-icon'/>Plus d'infos</button>
+          <div className="description">
+            <h1>
+              {popularMovies[0] && popularMovies[0].overview
+                ? popularMovies[0].overview
+                : "Titre non disponible"}
+            </h1>{" "}
+          </div>
+          <div className="buttons-bloc">
+            <button className="play-button">
+              <img src={playIcon} className="play-icon" />
+              Lecture
+            </button>
+            <button className="more-info-button">
+              <img src={moreInfo} className="more-info-icon" />
+              <Link
+                to={popularMovies[0] ? `/movie/${popularMovies[0].id}` : "#"}
+              >
+                Plus d'infos
+              </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -110,7 +137,7 @@ const Home = () => {
           <h1>Les films à ne pas manquer</h1>
           <Slider {...settings}>
             {popularMovies.map((movie) => (
-              <div 
+              <div
                 key={movie.id}
                 onMouseEnter={() => {
                   setIsHovered(true);
@@ -126,9 +153,11 @@ const Home = () => {
                     <img
                       src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
                       alt={`Affiche de ${movie.title}`}
-                      />
+                    />
                   )}
-                  {isHovered && currentMovie === movie && <MovieCard movieID={movie.id} />}
+                  {isHovered && currentMovie === movie && (
+                    <MovieCard movieID={movie.id} />
+                  )}
                 </div>
               </div>
             ))}
@@ -138,7 +167,7 @@ const Home = () => {
           <h1>Films les mieux notés</h1>
           <Slider {...settings}>
             {topRatedMovies.map((movie) => (
-              <div 
+              <div
                 key={movie.id}
                 onMouseEnter={() => {
                   setIsHovered(true);
@@ -156,7 +185,9 @@ const Home = () => {
                       alt={`Affiche de ${movie.title}`}
                     />
                   )}
-                  {isHovered && currentMovie === movie && <MovieCard movieID={movie.id} />}
+                  {isHovered && currentMovie === movie && (
+                    <MovieCard movieID={movie.id} />
+                  )}
                 </div>
               </div>
             ))}
@@ -166,7 +197,7 @@ const Home = () => {
           <h1>Séries TV populaires</h1>
           <Slider {...settings}>
             {popularTV.map((movie) => (
-              <div 
+              <div
                 key={movie.id}
                 onMouseEnter={() => {
                   setIsHovered(true);
@@ -184,7 +215,9 @@ const Home = () => {
                       alt={`Affiche de ${movie.title}`}
                     />
                   )}
-                  {isHovered && currentMovie === movie && <MovieCard movieID={movie.id} />}
+                  {isHovered && currentMovie === movie && (
+                    <MovieCard movieID={movie.id} />
+                  )}
                 </div>
               </div>
             ))}
@@ -194,7 +227,7 @@ const Home = () => {
           <h1>Séries TV les mieux notées</h1>
           <Slider {...settings}>
             {topRatedTV.map((movie) => (
-              <div 
+              <div
                 key={movie.id}
                 onMouseEnter={() => {
                   setIsHovered(true);
@@ -212,7 +245,9 @@ const Home = () => {
                       alt={`Affiche de ${movie.title}`}
                     />
                   )}
-                  {isHovered && currentMovie === movie && <MovieCard movieID={movie.id} />}
+                  {isHovered && currentMovie === movie && (
+                    <MovieCard movieID={movie.id} />
+                  )}
                 </div>
               </div>
             ))}
@@ -224,95 +259,3 @@ const Home = () => {
 };
 
 export default Home;
-
-// return (
-//   <div>
-//     <Header />
-//     <div>
-//         <h1>
-//           {popularMovies[0] && popularMovies[0].title ? popularMovies[0].title : 'Titre non disponible'}
-//         </h1>
-//       <img className='cover-home' src={popularMovies[0] && popularMovies[0].poster_path ? `https://image.tmdb.org/t/p/w500${popularMovies[0].backdrop_path}` : 'Pas de photo'} alt="Affiche du film" />
-//       <div className='description-block'>
-//         <h1 className='title-main-movie'>
-//           {popularMovies[0] && popularMovies[0].title ? popularMovies[0].title : 'Titre non disponible'}
-//         </h1>
-//         <div className='description'><h1>{popularMovies[0] && popularMovies[0].overview ? popularMovies[0].overview : 'Titre non disponible'}</h1> </div>
-//       <div className='buttons-bloc'>
-//         <button className='play-button'><img src={playIcon} className='play-icon'/>Lecture</button>
-//         <button className='more-info-button'><img src={moreInfo} className='more-info-icon'/>Plus d'infos</button>
-//         </div>
-//       </div>
-//     </div>
-//     <div className="Decalage">
-//       <div>
-//         <h1>Les films à ne pas manquer</h1>
-//         <Slider {...settings}>
-//           {popularMovies.map((movie) => (
-//             <Link to={`/movie/${movie.id}`} key={movie.id}>
-//               <div className="movie-item">
-//                 {movie.backdrop_path && (
-//                   <img
-//                     src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-//                     alt={`Affiche de ${movie.title}`}
-//                   />
-//                 )}
-//               </div>
-//             </Link>
-//           ))}
-//         </Slider>
-//       </div>
-//       <div>
-//         <h1>Films les mieux notés</h1>
-//         <Slider {...settings}>
-//           {topRatedMovies.map((movie) => (
-//             <Link to={`/movie/${movie.id}`} key={movie.id}>
-//               <div className="movie-item">
-//                 {movie.backdrop_path && (
-//                   <img
-//                     src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-//                     alt={`Affiche de ${movie.title}`}
-//                   />
-//                 )}
-//               </div>
-//             </Link>
-//           ))}
-//         </Slider>
-//       </div>
-//       <div>
-//         <h1>Séries TV populaires</h1>
-//         <Slider {...settings}>
-//           {popularTV.map((movie) => (
-//             <Link to={`/movie/${movie.id}`} key={movie.id}>
-//               <div className="movie-item">
-//                 {movie.backdrop_path && (
-//                   <img
-//                     src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-//                     alt={`Affiche de ${movie.title}`}
-//                   />
-//                 )}
-//               </div>
-//             </Link>
-//           ))}
-//         </Slider>
-//       </div>
-//       <div>
-//         <h1>Séries TV les mieux notées</h1>
-//         <Slider {...settings}>
-//           {topRatedTV.map((movie) => (
-//             <Link to={`/movie/${movie.id}`} key={movie.id}>
-//               <div className="movie-item">
-//                 {movie.backdrop_path && (
-//                   <img
-//                     src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
-//                     alt={`Affiche de ${movie.title}`}
-//                   />
-//                 )}
-//               </div>
-//             </Link>
-//           ))}
-//         </Slider>
-//       </div>
-//     </div>
-//   </div>
-// );
